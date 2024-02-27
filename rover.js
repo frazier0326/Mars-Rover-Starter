@@ -1,3 +1,6 @@
+const Command = require("./command");
+const Message = require("./message");
+
 class Rover {
    // Write code here!
    constructor(position) {
@@ -5,6 +8,15 @@ class Rover {
       this.mode = 'NORMAL';
       this.generatorWatts = 110;
    }
+   receiveMessage(message) {
+      let response = {
+      message: message.name,
+      results:[]
+      };
+      
+      return response;
+   }
+
 }
 
 module.exports = Rover;
