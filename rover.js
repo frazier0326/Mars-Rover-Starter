@@ -11,7 +11,10 @@ class Rover {
    receiveMessage(message) {
       let response = {
       message: message.name,
-      results:[]
+      results:[
+
+         
+      ]
       };
       
       return response;
