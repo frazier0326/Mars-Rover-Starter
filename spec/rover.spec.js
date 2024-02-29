@@ -28,7 +28,7 @@ describe("Rover class", function() {
     let commands = [new Command('MODE_CHANGE', 'LOW_POWER'), new Command('STATUS_CHECK')];
     let message = new Message("test name", commands);
     let receiveMessage = rover.receiveMessage(message).results;
-    expect(receiveMessage.length).toBe(commands.length);
+    expect(receiveMessage.length).toEqual(commands.length);
   });
   //10
   it("responds correctly to the status check command", function() {
